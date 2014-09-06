@@ -7,3 +7,5 @@ It uses the official RSS feed by Apple to read the latest blog posts by the Swif
 This project uses UITableView, NSXMLParser and UIWebView.
 
 I hope this example code will be useful to you :)
+
+<img src="Screenshot.png">
