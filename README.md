@@ -8,4 +8,4 @@ This project uses UITableView, NSXMLParser and UIWebView.
 
 I hope this example code will be useful to you :)
 
-<img src="Screenshot.png">
+<img src="Screenshot.png" width="250px">
