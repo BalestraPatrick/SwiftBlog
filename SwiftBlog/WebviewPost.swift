@@ -12,20 +12,20 @@ class WebviewPost: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
     
-    var blogPostURL: NSURL = NSURL()
+    var blogPostURL: URL? = nil
     
     override func viewDidLoad() {
-        let request = NSURLRequest(URL: blogPostURL)
+        let request = URLRequest(url: blogPostURL!)
         webView.loadRequest(request)
         webView.sizeToFit()
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     @IBAction func openInSafari(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(blogPostURL)
+        UIApplication.shared.open(blogPostURL!, options: [:], completionHandler: nil)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView!) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
